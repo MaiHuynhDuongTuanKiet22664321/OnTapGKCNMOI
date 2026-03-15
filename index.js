@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000; // lấy giá trị PORT từ file .env, 
 app.use(express.json({ extended: false })); // parse application/json
 app.use(express.urlencoded({ extended: true })); // parse application/x-www-form-urlencoded
 app.use(bodyParser.json()); // parse application/json
+app.use(express.static('public'));
 // Render giao diện
 app.use(express.static("./views")); // render giao diện từ thư mục views
 app.set("view engine", "ejs"); // sử dụng ejs làm view engine cho express
